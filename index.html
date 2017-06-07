@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kantor</title>
+	
+	
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style/style.css" />
+	<script src="js/script.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+
+<body>
+<header>
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+         <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Kantor">
+        </a>
+    </div>
+
+    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+				<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Aktualne kursy NBP</a></li>
+    <li><a data-toggle="tab" href="#menu2">Archiwalne kursy NBP</a></li>
+  </ul>
+			</div>
+		</nav>
+  </div>
+</header>
+
+<div class="tab-content">
+	<div id="home" class="tab-pane fade in active">	
+		<div class="head">
+		  <h2>Aplikacja umożliwiająca podgląd aktualnych i  archiwalnych kursów walut NBP oraz umożliwia kalkulacje walut.</h2>
+        <h3>Wykorzystane technologie:</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>jQuery</li>
+          <li>API</li>
+        </ul>
+      </div>
+		</div>
+	
+
+<div id="menu1" class="tab-pane fade">
+<section>
+  <div class="cointainer">
+  <div class="title">
+    <h3>Kursy walut według najnowszego Kursu NBP</h3>
+    <h4>Data ostatniej aktualizacji kursów wymiany: </h4>
+	</div>
+	<div id="effectiveDate"></div>
+  
+  
+  
+  
+	<div id="currencyTable"></div>
+    <div class="exchange" id="pln_to_foreign">
+      <input type="number" id="pln_count" class="input_count" name="plnCount"> PLN =>
+
+      <select id="currencySelect" class="select"></select>
+
+      <button type="button" class="button" id="count_to_foreign">Licz</button>
+    </div>
+    <div class="exchange" id="forgein_to_pln">
+      <input type="number" id="forgein_count" class="input_count" name="forgeinCount">
+      <select id="currencySelect2" class="select"></select> => PLN
+      <button type="button" class="button" id="count_to_pln">Licz</button>
+    </div>
+    <div class="result">
+      <p></p>
+    </div>
+	</div>
+	</div>
+	
+	 <div id="menu2" class="tab-pane fade" id="chose_date">
+    <div id="calendar">
+	<div class="head_calendar">
+	<h3>Kursy walut wg kursu NBP dla wybranej daty</h3>
+      <h4>Sprawdz kursy w wybranym dniu:</h4>
+      <input type="date" id="submit_date" value="2015-05-05">
+      <button id="btn1">Sprawdź</button>
+	  </div>
+      <div id="div1"></div>
+    </div>
+  </div>
+  
+</section>
+
+</div>
+
+</body>
+</html>
